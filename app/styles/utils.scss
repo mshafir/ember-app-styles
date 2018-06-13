@@ -1,0 +1,33 @@
+// height / width
+@for $i from 1 through 20 {
+	$pct: $i * 5;
+	.w-#{$pct} { width: $pct * 1%; }
+	.h-#{$pct} { height: $pct * 1%; }
+}
+
+// padding / margin
+@each $name, $value in ('sm', 0.5), ('md', 1), ('lg', 2) {
+	.padding-#{$name} { padding: $value * 1rem; }
+	.margin-#{$name} { margin: $value * 1rem; }
+}
+
+// font-size
+@each $name, $value in ('sm', 0.8), ('md', 1), ('lg', 2) {
+	.font-#{$name} { font-size:: $value * 1rem; }
+}
+
+@each $name, $value in ('sm', 1), ('md', 2), ('lg', 3) {
+	.letter-spacing-#{$name} { letter-spacing: $value * 1px; }
+}
+
+.small-caps {
+	font-variant: small-caps;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.font-lowercase {
+	text-transform: lowercase;
+}

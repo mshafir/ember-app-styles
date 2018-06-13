@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Source+Sans+Pro');
+
+@import 'flex';
+@import 'utils';
+@import 'color-utils';
+@import 'box-shadow';
+
+body {
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+}
+
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+}

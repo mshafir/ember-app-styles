@@ -1,0 +1,28 @@
+.firm {
+  flex: 0 1 auto;
+	position: relative;
+}
+
+.flex {
+  flex: 1 1;
+	position: relative;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	width: 100%;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	height: 100%;
+}
+
+.layout-wrapper {
+	width: 100vw;
+	height: 100vh;
+}

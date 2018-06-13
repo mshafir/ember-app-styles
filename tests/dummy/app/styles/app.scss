@@ -1,0 +1,88 @@
+@import 'ember-app-styles';
+
+.FreestyleGuide {
+	height: 100vh;
+}
+
+.FreestyleGuide-header {
+	@extend .firm;
+}
+
+.FreestyleGuide-body {
+	@extend .flex;
+}
+
+.FreestyleGuide-nav {
+	border-bottom: 1px solid #b6b6b6;
+}
+
+@media (min-width: 600px) {
+	.FreestyleGuide-nav {
+		overflow-y: auto;
+		border-bottom: none;
+	}
+}
+
+.FreestyleGuide-content {
+	margin-top: 0;
+}
+
+.FreestyleUsage {
+	// @extend .shadow;
+	@extend .border-lightsilver;
+	margin: {
+		top: 1rem;
+		left: 1rem;
+		bottom: 2rem;
+		right: 1rem;
+	}
+	padding: 0;
+	border-radius: 0.2rem;
+}
+
+.FreestyleUsage-title {
+	@extend .gray;
+	@extend .font-sm;
+	@extend .letter-spacing-sm;
+}
+
+.FreestyleUsage-usage {
+	padding-bottom: 0;
+}
+
+.FreestyleUsage-snippet pre {
+	margin: 0;
+	border-bottom-left-radius: 0.2rem;
+	border-bottom-right-radius: 0.2rem;
+}
+
+.wrapper {
+	width: 300px;
+	height: 200px;
+	background-color: #eee;
+	@extend .border-silver;
+
+	&.show-borders {
+		&.column > *, .column > * {
+			@extend .border-bottom-silver;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		&.row > *, .row > * {
+			@extend .border-right-silver;
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+}
+
+.square {
+	width: 5rem;
+	height: 5rem;
+	display: inline-block;
+	vertical-align: top;
+	padding: 1rem;
+	margin: 1rem;
+}

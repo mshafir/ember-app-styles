@@ -1,0 +1,68 @@
+
+// borrowed from http://clrs.cc/
+$aqua:   #7FDBFF;
+$blue:   #0074D9;
+$navy:   #001F3F;
+$teal:   #39CCCC;
+$green:  #2ECC40;
+$olive:  #3D9970;
+$lime:   #01FF70;
+
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+
+$white:  #FFFFFF;
+$silver: #DDDDDD;
+$gray:   #AAAAAA;
+$black:  #111111;
+
+$color-list: (
+	aqua:   $aqua,
+	blue:   $blue,
+	navy:   $navy,
+	teal:   $teal,
+	green:  $green,
+	olive:  $olive,
+	lime:   $lime,
+
+	yellow:  $yellow,
+	orange:  $orange,
+	red:     $red,
+	fuchsia: $fuchsia,
+	purple:  $purple,
+	maroon:  $maroon,
+
+	white:  $white,
+	silver: $silver,
+	gray:   $gray,
+	black:  $black
+);
+
+@each $key, $value in $color-list {
+	@each $adjust, $color in ('light', lighten($value, 5)),
+													 ('', $value),
+													 ('dark', darken($value, 5)) {
+
+	  .#{$adjust}#{$key} {
+	    color: $color;
+	  }
+
+	  .bg-#{$adjust}#{$key}  {
+	    background-color: $color;
+	  }
+
+	  .border-#{$adjust}#{$key}  {
+	    border: 1px solid $color;
+	  }
+
+		@each $side in top,left,bottom,right {
+			.border-#{$side}-#{$adjust}#{$key} {
+				border-#{$side}: 1px solid $key;
+			}
+		}
+	}
+}

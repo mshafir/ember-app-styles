@@ -1,0 +1,74 @@
+{{#freestyle-section name='Visual Style' as |section|}}
+
+	{{#section.subsection name='Typography'}}
+
+		{{#freestyle-usage 'typography-lato' title='Lato' hasCode=false}}
+			{{freestyle-typeface fontFamily='Lato'}}
+		{{/freestyle-usage}}
+
+		{{#freestyle-usage 'typography-source-sans-pro' title='Source Sans Pro' hasCode=false}}
+			{{freestyle-typeface fontFamily='Source Sans Pro'}}
+		{{/freestyle-usage}}
+
+		{{#freestyle-usage 'font-size-classes' title='Font size' highlightJsTheme='atom-one-light'}}
+			<div class="font-sm">Small Font</div>
+			<div class="font-md">Medium Font</div>
+			<div class="font-lg">Large Font</div>
+		{{/freestyle-usage}}
+
+		{{#freestyle-usage 'letter-spacing-classes' title='Letter spacing'}}
+			<div class="letter-spacing-sm">Small Letter Spacing</div>
+			<div class="letter-spacing-md">Medium Letter Spacing</div>
+			<div class="letter-spacing-lg">Large Letter Spacing</div>
+		{{/freestyle-usage}}
+
+		{{#freestyle-usage 'font-styles' title='Font styling'}}
+			<div class="small-caps">Small Caps</div>
+			<div class="lowercase">Lowercase</div>
+		{{/freestyle-usage}}
+
+	{{/section.subsection}}
+
+	{{#section.subsection name='Color'}}
+
+		{{#freestyle-usage 'color-class-usage' title='Color class usage'}}
+			<div class='green square'>Text Color</div>
+			<div class='bg-green white square'>Background Color</div>
+			<div class='border-green green square'>Border Color</div>
+		{{/freestyle-usage}}
+
+		{{#freestyle-usage 'border-side-color-class-usage' title='Border side class usage'}}
+			<div class='border-left-blue blue square'>Left Border</div>
+			<div class='border-bottom-blue blue square'>Bottom Border</div>
+			<div class='border-right-blue blue square'>Right Border</div>
+			<div class='border-top-blue blue square'>Top Border</div>
+		{{/freestyle-usage}}
+
+		{{#freestyle-usage 'fp' title='Crls.cc Palette' usageTitle='Usage' hasCode=false}}
+			{{freestyle-palette
+				colorPalette=(hash
+					aqua=(hash name='aqua' base='#7FDBFF')
+					blue=(hash name='blue' base='#0074D9')
+					navy=(hash name='navy' base='#001F3F')
+					teal=(hash name='teal' base='#39CCCC')
+					green=(hash name='green' base='#2ECC40')
+					olive=(hash name='olive' base='#3D9970')
+					lime=(hash name='lime' base='#01FF70')
+					yellow=(hash name='yellow' base='#FFDC00')
+					orange=(hash name='orange' base='#FF851B')
+					red=(hash name='red' base='#FF4136')
+					fuchsia=(hash name='fuchsia' base='#F012BE')
+					purple=(hash name='purple' base='#B10DC9')
+					maroon=(hash name='maroon' base='#85144B')
+					white=(hash name='white' base='#FFFFFF')
+					silver=(hash name='silver' base='#DDDDDD')
+					gray=(hash name='gray' base='#AAAAAA')
+					black=(hash name='black' base='#111111')
+				)
+				title='Crls.cc App Color Palette'
+				description='A nicer color palette for the web: https://clrs.cc/'
+			}}
+		{{/freestyle-usage}}
+	{{/section.subsection}}
+
+{{/freestyle-section}}

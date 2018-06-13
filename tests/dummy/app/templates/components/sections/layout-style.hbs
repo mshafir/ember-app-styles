@@ -1,0 +1,66 @@
+{{#freestyle-section name='Layout' as |section|}}
+
+  {{#section.subsection name='Flex Layout'}}
+
+    {{#freestyle-usage 'column-layout' title='Column Layout'}}
+
+      <div class="wrapper column show-borders">
+        <div class="firm">Header</div>
+        <div class="flex">Body</div>
+        <div class="firm">Footer</div>
+      </div>
+
+    {{/freestyle-usage}}
+
+    {{#freestyle-usage 'row-layout' title='Row Layout'}}
+      <div class="wrapper column show-borders">
+        <div class="row flex">
+          <div class="firm">Header</div>
+          <div class="flex">Body</div>
+          <div class="firm">Footer</div>
+        </div>
+      </div>
+    {{/freestyle-usage}}
+
+  {{/section.subsection}}
+
+  {{#section.subsection name='Percentage Layout'}}
+
+    {{#freestyle-usage 'percentage-classes-height' title='Percentage Classes (Height)'}}
+      <div class="wrapper column show-borders">
+        <div class="h-30">30%</div>
+        <div class="h-20">20%</div>
+        <div class="h-50">50%</div>
+      </div>
+    {{/freestyle-usage}}
+
+    {{#freestyle-usage 'percentage-classes-width' title='Percentage Classes (Width)'}}
+      <div class="wrapper row show-borders">
+        <div class="w-30">30%</div>
+        <div class="w-20">20%</div>
+        <div class="w-50">50%</div>
+      </div>
+    {{/freestyle-usage}}
+
+  {{/section.subsection}}
+
+  {{#section.subsection name='Full Custom Layout Example'}}
+
+    {{#freestyle-usage 'full-custom-example' title='Layout Example'}}
+      <div class="wrapper column show-borders">
+        <div class="firm">Header</div>
+        <div class="flex row">
+          <div class="firm column w-40">
+            <div class="flex">Left Top</div>
+            <div class="flex">Left Bottom</div>
+          </div>
+          <div class="flex">Center</div>
+          <div class="firm w-20">Right</div>
+        </div>
+        <div class="firm">Footer</div>
+      </div>
+    {{/freestyle-usage}}
+
+  {{/section.subsection}}
+
+{{/freestyle-section}}
