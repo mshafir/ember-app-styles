@@ -44,30 +44,34 @@
 			<div class='border-top-blue blue square'>Top Border</div>
 		{{/freestyle-usage}}
 
-		{{#freestyle-usage 'fp' title='Crls.cc Palette' usageTitle='Usage' hasCode=false}}
+		{{#freestyle-usage 'fp' title='Base App Color Palette' usageTitle='Usage' hasCode=false}}
 			{{freestyle-palette
 				colorPalette=(hash
-					aqua=(hash name='aqua' base='#7FDBFF')
-					blue=(hash name='blue' base='#0074D9')
-					navy=(hash name='navy' base='#001F3F')
-					teal=(hash name='teal' base='#39CCCC')
-					green=(hash name='green' base='#2ECC40')
-					olive=(hash name='olive' base='#3D9970')
-					lime=(hash name='lime' base='#01FF70')
-					yellow=(hash name='yellow' base='#FFDC00')
-					orange=(hash name='orange' base='#FF851B')
-					red=(hash name='red' base='#FF4136')
-					fuchsia=(hash name='fuchsia' base='#F012BE')
-					purple=(hash name='purple' base='#B10DC9')
-					maroon=(hash name='maroon' base='#85144B')
-					white=(hash name='white' base='#FFFFFF')
-					silver=(hash name='silver' base='#DDDDDD')
-					gray=(hash name='gray' base='#AAAAAA')
-					black=(hash name='black' base='#111111')
+					white=(hash name='white' base='#ffffff')
+					black=(hash name='black' base='#222222')
+					gray=(hash name='gray' base='#f5f5f5')
+					silver=(hash name='silver' base='#dddddd')
+
+					blue=(hash name='blue' base='#4078c0')
+					green=(hash name='green' base='#6cc644')
+					red=(hash name='red' base='#bd2c00')
+					orange=(hash name='orange' base='#c9510c')
+					purple=(hash name='purple' base='#6e5494')
+					yellow=(hash name='yellow' base='#ffd36b')
 				)
-				title='Crls.cc App Color Palette'
-				description='A nicer color palette for the web: https://clrs.cc/'
+				title='App Color Palette'
+				description='An alternate color palette, based on github primer css framework'
 			}}
+		{{/freestyle-usage}}
+
+		{{#freestyle-usage 'color-adjust' title='Color Adjustment'}}
+			<div class="square bg-darkestgreen white">Darkest Green</div>
+			<div class="square bg-darkergreen white">Darker Green</div>
+			<div class="square bg-darkgreen">Dark Green</div>
+			<div class="square bg-green">Green</div>
+			<div class="square bg-lightgreen">Light Green</div>
+			<div class="square bg-lightergreen">Lighter Green</div>
+			<div class="square bg-lightestgreen">Lightest Green</div>
 		{{/freestyle-usage}}
 	{{/section.subsection}}
 

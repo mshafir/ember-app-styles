@@ -1,0 +1,25 @@
+@import 'color-utils';
+@import 'utils';
+
+.label {
+	@extend .rounded-md;
+	@extend .bg-gray;
+	@extend .margin-sm;
+	@extend .font-sm;
+
+	padding: 0.2rem 1rem;
+	display: inline-block;
+
+	@each $color in primary,secondary,error,warning,success {
+		&.#{$color} {
+			@extend .bg-#{$color};
+			@extend .white;
+		}
+	}
+}
+
+.badge {
+	@extend .label;
+	@extend .rounded-lg;
+	padding: 0.2rem 0.5rem;
+}

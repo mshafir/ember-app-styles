@@ -1,7 +1,7 @@
 {
   "name": "ember-app-styles",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "My personal base style set for ember applications",
   "keywords": [
     "ember-addon"
   ],

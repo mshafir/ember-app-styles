@@ -1,0 +1,58 @@
+@import 'color-utils';
+@import 'utils';
+
+button,.button {
+	@extend .bg-darkgray;
+	@extend .rounded-sm;
+	padding: 1rem 2rem;
+	margin: 0.5rem;
+	display: inline-block;
+	transition: 0.2s;
+
+	&:hover {
+		@extend .bg-darkergray;
+		cursor: pointer;
+	}
+
+	&.small {
+		@extend .font-sm;
+		padding: 0.5rem 1rem;
+	}
+
+	&.large {
+		@extend .font-lg;
+		padding: 1rem 2rem;
+	}
+
+	&.outline {
+		@extend .bg-white;
+		@extend .fg-darkestgray;
+		@extend .border-darkestgray;
+		transition: none;
+
+		&:hover {
+			@extend .bg-darkestgray;
+			@extend .white;
+		}
+	}
+
+	@each $color in primary,secondary,error,warning,success {
+		&.#{$color} {
+			@extend .bg-#{$color};
+			@extend .white;
+			&:hover {
+				@extend .bg-dark#{$color};
+			}
+
+			&.outline {
+				@extend .bg-white;
+				@extend .fg-#{$color};
+				@extend .border-#{$color};
+				&:hover {
+					@extend .bg-#{$color};
+					@extend .white;
+				}
+			}
+		}
+	}
+}

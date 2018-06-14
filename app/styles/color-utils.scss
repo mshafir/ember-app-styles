@@ -1,53 +1,53 @@
+@import 'theme';
 
 // borrowed from http://clrs.cc/
-$aqua:   #7FDBFF;
-$blue:   #0074D9;
-$navy:   #001F3F;
-$teal:   #39CCCC;
-$green:  #2ECC40;
-$olive:  #3D9970;
-$lime:   #01FF70;
-
-$yellow:  #FFDC00;
-$orange:  #FF851B;
-$red:     #FF4136;
-$fuchsia: #F012BE;
-$purple:  #B10DC9;
-$maroon:  #85144B;
-
 $white:  #FFFFFF;
+$black:  #222222;
+$gray:   #f5f5f5;
 $silver: #DDDDDD;
-$gray:   #AAAAAA;
-$black:  #111111;
+$blue:   #4078c0;
+$green:  #6cc644;
+$red:    #bd2c00;
+$orange: #c9510c;
+$purple: #6e5494;
+$yellow: #ffd36b;
+
+
 
 $color-list: (
-	aqua:   $aqua,
-	blue:   $blue,
-	navy:   $navy,
-	teal:   $teal,
-	green:  $green,
-	olive:  $olive,
-	lime:   $lime,
-
-	yellow:  $yellow,
-	orange:  $orange,
-	red:     $red,
-	fuchsia: $fuchsia,
-	purple:  $purple,
-	maroon:  $maroon,
-
-	white:  $white,
+	white: $white,
+	black: $black,
+	gray: $gray,
 	silver: $silver,
-	gray:   $gray,
-	black:  $black
+	blue: $blue,
+	green: $green,
+	red: $red,
+	orange: $orange,
+	purple: $purple,
+	yellow: $yellow,
+
+	primary: $primary,
+	secondary: $secondary,
+	success: $success,
+	error: $error,
+	warning: $warning,
+	info: $info
 );
 
 @each $key, $value in $color-list {
-	@each $adjust, $color in ('light', lighten($value, 5)),
+	@each $adjust, $color in ('lightest', lighten($value, 30)),
+													 ('lighter', lighten($value, 15)),
+													 ('light', lighten($value, 5)),
 													 ('', $value),
-													 ('dark', darken($value, 5)) {
+													 ('dark', darken($value, 5)),
+													 ('darker', darken($value, 15)),
+													 ('darkest', darken($value, 30)) {
 
 	  .#{$adjust}#{$key} {
+	    color: $color;
+	  }
+
+		.fg-#{$adjust}#{$key} {
 	    color: $color;
 	  }
 

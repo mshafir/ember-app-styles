@@ -11,6 +11,11 @@
 	.margin-#{$name} { margin: $value * 1rem; }
 }
 
+// border radius
+@each $name, $value in ('sm', 0.2), ('md', 0.4), ('lg', 2) {
+	.rounded-#{$name} { border-radius: $value * 1rem; }
+}
+
 // font-size
 @each $name, $value in ('sm', 0.8), ('md', 1), ('lg', 2) {
 	.font-#{$name} { font-size:: $value * 1rem; }
