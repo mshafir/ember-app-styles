@@ -1,7 +1,7 @@
 ember-app-styles
 ==============================================================================
 
-[Short description of the addon.]
+My personal base style set for ember applications
 
 Installation
 ------------------------------------------------------------------------------
@@ -14,8 +14,7 @@ ember install ember-app-styles
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
-
+See the dummy app for the style guide.
 
 Contributing
 ------------------------------------------------------------------------------
