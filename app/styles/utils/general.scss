@@ -36,3 +36,9 @@
 .font-lowercase {
 	text-transform: lowercase;
 }
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

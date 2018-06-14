@@ -1,0 +1,22 @@
+{{#freestyle-section name='Ember Components' as |section|}}
+  {{#section.subsection name='List Items'}}
+    {{#freestyle-usage 'list-items' title='List Items'}}
+      <div class='w-40 border-right-silver'>
+        {{#list-item
+            leftIcon='user'
+            rightIcon='close'
+            selected=(eq selectedItem 1)
+            click=(action (mut selectedItem) 1)}}
+          Joe Bob
+        {{/list-item}}
+        {{#list-item
+            leftIcon='user'
+            rightIcon='close'
+            selected=(eq selectedItem 2)
+            click=(action (mut selectedItem) 2)}}
+          Mary Anne
+        {{/list-item}}
+      </div>
+    {{/freestyle-usage}}
+  {{/section.subsection}}
+{{/freestyle-section}}

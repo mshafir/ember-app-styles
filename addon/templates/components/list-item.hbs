@@ -1,0 +1,21 @@
+
+<div class="item-main">
+    <div class='item-left'>
+        {{#each (repeat indent) as |i|}}
+            <div class='spacer'>&nbsp;</div>
+        {{/each}}
+        {{#if leftIcon}}
+            <a {{action "onLeftIconClick" bubbles=false}}>{{fa-icon icon=leftIcon}}</a>
+        {{else}}
+            <div class='spacer'>&nbsp;</div>
+        {{/if}}
+    </div>
+    <div class='item-center'>
+        {{yield}}
+    </div>
+    {{#if rightIcon}}
+        <div class='item-right' {{action "onRightIconClick" bubbles=false}}>
+            <a>{{fa-icon icon=rightIcon}}</a>
+        </div>
+    {{/if}}
+</div>

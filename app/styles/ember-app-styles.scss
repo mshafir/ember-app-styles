@@ -2,14 +2,13 @@
 
 @import 'theme';
 
-@import 'utils';
-@import 'color-utils';
-@import 'box-shadow';
+@import 'utils/all';
 
-@import 'flex';
+@import 'layout/flex';
 
-@import 'button';
-@import 'label';
+@import 'components/button';
+@import 'components/label';
+@import 'components/list-item';
 
 body {
 	font-family: 'Lato', sans-serif;

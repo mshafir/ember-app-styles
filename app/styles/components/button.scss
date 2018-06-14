@@ -1,5 +1,4 @@
-@import 'color-utils';
-@import 'utils';
+@import '../utils/all';
 
 button,.button {
 	@extend .bg-darkgray;
@@ -36,7 +35,7 @@ button,.button {
 		}
 	}
 
-	@each $color in primary,secondary,error,warning,success {
+	@each $color, $value in $theme-colors {
 		&.#{$color} {
 			@extend .bg-#{$color};
 			@extend .white;

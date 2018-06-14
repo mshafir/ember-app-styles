@@ -1,3 +1,7 @@
+$color: #333 !default;
+$faded-color: #777 !default;
+$selected: lighten(#4078c0, 30) !default;
+
 $primary: #4078c0 !default;
 $secondary: #71A9F7 !default;
 
@@ -5,3 +9,27 @@ $error: #bd2c00 !default;
 $warning: darken(#ffd36b, 20) !default;
 $success: #6cc644 !default;
 $info: #4078c0 !default;
+
+$theme-colors: (
+	white: #FFFFFF,
+	black: #222222,
+	gray: #f5f5f5,
+	silver: #DDDDDD,
+	blue: #4078c0,
+	green: #6cc644,
+	red: #bd2c00,
+	orange: #c9510c,
+	purple: #6e5494,
+	yellow: #ffd36b,
+
+	color: $color,
+	faded-color: $faded-color,
+	selected: $selected,
+
+	primary: $primary,
+	secondary: $secondary,
+	success: $success,
+	error: $error,
+	warning: $warning,
+	info: $info
+) !default;

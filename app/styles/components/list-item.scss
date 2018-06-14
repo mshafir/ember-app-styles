@@ -1,0 +1,68 @@
+@import '../utils/all';
+@import '../layout/flex';
+
+.list-item {
+	padding: 0.5rem 1rem;
+
+	cursor: pointer;
+	transition: 0.2s;
+
+	i {
+		margin-right: 0.5rem;
+		font-size: 0.8rem;
+		margin-top: -0.1rem;
+		vertical-align: middle;
+		color: $faded-color;
+	}
+
+	&:hover {
+		.item-main {
+			.item-right i {
+				opacity: 1;
+			}
+		}
+		background-color: lighten($selected, 5);
+	}
+
+	&.faded {
+		opacity: 0.6;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&.selected {
+		background-color: $selected;
+	}
+
+	.item-main {
+		@extend .row;
+		width: 100%;
+
+		.item-left {
+			@extend .firm;
+			white-space: nowrap;
+
+			.spacer {
+				width: 0.7rem;
+				display: inline-block;
+			}
+		}
+
+		.item-center {
+			@extend .flex;
+			@extend .truncate;
+		}
+
+		.item-right {
+			@extend .firm;
+			white-space: nowrap;
+
+			i {
+				opacity: 0;
+				transition: opacity 0.2s;
+			}
+		}
+	}
+}

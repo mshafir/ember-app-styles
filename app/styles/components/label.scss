@@ -1,5 +1,4 @@
-@import 'color-utils';
-@import 'utils';
+@import '../utils/all';
 
 .label {
 	@extend .rounded-md;
@@ -10,7 +9,7 @@
 	padding: 0.2rem 1rem;
 	display: inline-block;
 
-	@each $color in primary,secondary,error,warning,success {
+	@each $color, $value in $theme-colors {
 		&.#{$color} {
 			@extend .bg-#{$color};
 			@extend .white;

@@ -32,16 +32,16 @@
 	{{#section.subsection name='Color'}}
 
 		{{#freestyle-usage 'color-class-usage' title='Color class usage'}}
-			<div class='green square'>Text Color</div>
-			<div class='bg-green white square'>Background Color</div>
-			<div class='border-green green square'>Border Color</div>
+			<div class='fg-green square'>Text Color</div>
+			<div class='bg-green fg-white square'>Background Color</div>
+			<div class='border-green fg-green square'>Border Color</div>
 		{{/freestyle-usage}}
 
 		{{#freestyle-usage 'border-side-color-class-usage' title='Border side class usage'}}
-			<div class='border-left-blue blue square'>Left Border</div>
-			<div class='border-bottom-blue blue square'>Bottom Border</div>
-			<div class='border-right-blue blue square'>Right Border</div>
-			<div class='border-top-blue blue square'>Top Border</div>
+			<div class='border-left-blue fg-blue square'>Left Border</div>
+			<div class='border-bottom-blue fg-blue square'>Bottom Border</div>
+			<div class='border-right-blue fg-blue square'>Right Border</div>
+			<div class='border-top-blue fg-blue square'>Top Border</div>
 		{{/freestyle-usage}}
 
 		{{#freestyle-usage 'fp' title='Base App Color Palette' usageTitle='Usage' hasCode=false}}
@@ -65,8 +65,8 @@
 		{{/freestyle-usage}}
 
 		{{#freestyle-usage 'color-adjust' title='Color Adjustment'}}
-			<div class="square bg-darkestgreen white">Darkest Green</div>
-			<div class="square bg-darkergreen white">Darker Green</div>
+			<div class="square bg-darkestgreen fg-white">Darkest Green</div>
+			<div class="square bg-darkergreen fg-white">Darker Green</div>
 			<div class="square bg-darkgreen">Dark Green</div>
 			<div class="square bg-green">Green</div>
 			<div class="square bg-lightgreen">Light Green</div>

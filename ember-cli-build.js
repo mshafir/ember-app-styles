@@ -4,13 +4,14 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
-		includeHighlightStyle: false,
 		freestyle: {
-			defaultTheme: 'atom-one-light',
 	    snippetSearchPaths: [
 				'addon',
 				'tests/dummy/app']
-	  }
+	  },
+		'ember-font-awesome': {
+			includeFontFiles: false
+		}
   });
 
   /*
