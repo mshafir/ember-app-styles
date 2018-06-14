@@ -15,6 +15,7 @@ Usage
 ------------------------------------------------------------------------------
 
 See the dummy app for the style guide.
+https://mshafir.github.io/ember-app-styles/
 
 Contributing
 ------------------------------------------------------------------------------
