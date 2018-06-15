@@ -1,0 +1,41 @@
+.column {
+	& > * {
+		@extend .border-bottom-color;
+		&:last-child {
+			@extend .border-bottom-none;
+		}
+	}
+
+	& > .header {
+		@extend .lowercase;
+		@extend .small-caps;
+		@extend .fg-faded-color;
+		@extend .letter-spacing-sm;
+		padding: 0.5rem 1rem;
+	}
+
+	& > .flex {
+		overflow-y: auto;
+	}
+
+	& > .footer {
+		@extend .fg-faded-color;
+		@extend .letter-spacing-sm;
+		@extend .font-sm;
+		padding: 0.5rem 1rem;
+	}
+
+	&.inverted {
+		@extend .bg-lighterblack;
+		@extend .fg-white;
+
+		& > * {
+			@extend .border-bottom-none;
+		}
+
+		& > .header, & > .footer {
+			@extend .fg-darkerwhite;
+		}
+	}
+
+}

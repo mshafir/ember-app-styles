@@ -3,8 +3,8 @@
 button,.button {
 	@extend .bg-darkgray;
 	@extend .rounded-sm;
+	@extend .margin-sm;
 	padding: 1rem 2rem;
-	margin: 0.5rem;
 	display: inline-block;
 	transition: 0.2s;
 
@@ -38,7 +38,7 @@ button,.button {
 	@each $color, $value in $theme-colors {
 		&.#{$color} {
 			@extend .bg-#{$color};
-			@extend .white;
+			@extend .fg-white;
 			&:hover {
 				@extend .bg-dark#{$color};
 			}

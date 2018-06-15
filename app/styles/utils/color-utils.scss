@@ -28,3 +28,21 @@
 		}
 	}
 }
+
+.border-color {
+	border: 1px solid $border-color;
+}
+
+.border-none  {
+	border: none;
+}
+
+@each $side in top,left,bottom,right {
+	.border-#{$side}-color {
+		border-#{$side}: 1px solid $border-color;
+	}
+	
+	.border-#{$side}-none {
+		border-#{$side}: none;
+	}
+}

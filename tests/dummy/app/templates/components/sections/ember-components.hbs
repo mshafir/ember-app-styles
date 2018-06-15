@@ -2,21 +2,71 @@
   {{#section.subsection name='List Items'}}
     {{#freestyle-usage 'list-items' title='List Items'}}
       <div class='w-40 border-right-silver'>
-        {{#list-item
-            leftIcon='user'
-            rightIcon='close'
-            selected=(eq selectedItem 1)
-            click=(action (mut selectedItem) 1)}}
-          Joe Bob
-        {{/list-item}}
-        {{#list-item
-            leftIcon='user'
-            rightIcon='close'
-            selected=(eq selectedItem 2)
-            click=(action (mut selectedItem) 2)}}
-          Mary Anne
-        {{/list-item}}
+        {{#each (array 'Joe Smith' 'Mary Jane' 'Simon Andrew') as |user|}}
+          {{#list-item
+              leftIcon='user'
+              rightIcon='chevron-right'
+              selected=(eq selectedItem user)
+              onClick=(action (mut selectedItem) user)
+              onRightIconClick=(action 'sayHi' user)}}
+            {{user}}
+          {{/list-item}}
+        {{/each}}
       </div>
+    {{/freestyle-usage}}
+
+    {{#freestyle-usage 'list-items-tree' title='List Item Tree'}}
+      <div class='w-40 border-right-silver'>
+        {{#each (array 'Joe Smith' 'Mary Jane' 'Simon Andrew') as |user|}}
+          {{#list-item
+              leftIcon=(if (eq openedItem user) 'chevron-down' 'chevron-right')
+              onClick=(action (mut openedItem) user)}}
+            {{user}}
+          {{/list-item}}
+          {{#if (eq openedItem user)}}
+            {{#list-item indent=1 leftIcon='inbox'}}See Messages{{/list-item}}
+            {{#list-item indent=1 leftIcon='envelope'}}Send Message{{/list-item}}
+          {{/if}}
+        {{/each}}
+      </div>
+    {{/freestyle-usage}}
+  {{/section.subsection}}
+
+  {{#section.subsection name='Columns'}}
+    {{#freestyle-usage 'basic-column' title='Basic Column'}}
+        <div class='layout-wrapper'>
+          {{#column-wrapper}}
+            {{#column-header}}
+              Items
+            {{/column-header}}
+            {{#column-main}}
+              {{#each (range 1 10) as |i|}}
+                {{#list-item leftIcon='reorder'}}Item {{i}}{{/list-item}}
+              {{/each}}
+            {{/column-main}}
+            {{#column-footer}}
+              Additional Information
+            {{/column-footer}}
+          {{/column-wrapper}}
+        </div>
+    {{/freestyle-usage}}
+
+    {{#freestyle-usage 'inverted-column' title='Inverted Column'}}
+        <div class='layout-wrapper'>
+          {{#column-wrapper classNames='inverted'}}
+            {{#column-header}}
+              Items
+            {{/column-header}}
+            {{#column-main}}
+              {{#each (range 1 10) as |i|}}
+                {{#list-item leftIcon='reorder'}}Item {{i}}{{/list-item}}
+              {{/each}}
+            {{/column-main}}
+            {{#column-footer}}
+              Additional Information
+            {{/column-footer}}
+          {{/column-wrapper}}
+        </div>
     {{/freestyle-usage}}
   {{/section.subsection}}
 {{/freestyle-section}}

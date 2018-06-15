@@ -12,7 +12,7 @@
 	@each $color, $value in $theme-colors {
 		&.#{$color} {
 			@extend .bg-#{$color};
-			@extend .white;
+			@extend .fg-white;
 		}
 	}
 }

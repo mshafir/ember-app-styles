@@ -1,6 +1,8 @@
 $color: #333 !default;
 $faded-color: #777 !default;
 $selected: lighten(#4078c0, 30) !default;
+$border-color: #ddd !default;
+$background-color: #fafafa !default;
 
 $primary: #4078c0 !default;
 $secondary: #71A9F7 !default;
@@ -25,6 +27,8 @@ $theme-colors: (
 	color: $color,
 	faded-color: $faded-color,
 	selected: $selected,
+	border-color: $border-color,
+	background-color: $background-color,
 
 	primary: $primary,
 	secondary: $secondary,

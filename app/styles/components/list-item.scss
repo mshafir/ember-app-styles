@@ -36,6 +36,20 @@
 		background-color: $selected;
 	}
 
+	@at-root {
+		.inverted .list-item {
+			&:hover {
+				background-color: transparentize($selected, 0.7);
+			}
+			&.selected {
+				background-color: transparentize($selected, 0.6);
+			}
+			i {
+				@extend .fg-darkestwhite;
+			}
+		}
+	}
+
 	.item-main {
 		@extend .row;
 		width: 100%;

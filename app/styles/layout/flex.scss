@@ -1,3 +1,5 @@
+@import '../utils/all';
+
 .firm {
   flex: 0 0 auto;
 	position: relative;
@@ -25,4 +27,20 @@
 .layout-wrapper {
 	width: 100vw;
 	height: 100vh;
+	@extend .bg-background-color;
+
+	&.show-borders {
+		&.column > *, .column > * {
+			@extend .border-bottom-color;
+			&:last-child {
+				@extend .border-bottom-none;
+			}
+		}
+		&.row > *, .row > * {
+			@extend .border-right-color;
+			&:last-child {
+				@extend .border-right-none;
+			}
+		}
+	}
 }

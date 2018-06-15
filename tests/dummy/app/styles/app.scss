@@ -56,26 +56,10 @@
 	border-bottom-right-radius: 0.2rem;
 }
 
-.wrapper {
+.layout-wrapper {
 	width: 300px;
 	height: 200px;
-	background-color: #eee;
 	@extend .border-silver;
-
-	&.show-borders {
-		&.column > *, .column > * {
-			@extend .border-bottom-silver;
-			&:last-child {
-				border-bottom: none;
-			}
-		}
-		&.row > *, .row > * {
-			@extend .border-right-silver;
-			&:last-child {
-				border-right: none;
-			}
-		}
-	}
 }
 
 .square {
