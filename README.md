@@ -44,6 +44,9 @@ Contributing
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
+### Publishing the github-pages update
+`ember github-pages:commit --message "Initial gh-pages release"``
+
 License
 ------------------------------------------------------------------------------
 
