@@ -27,7 +27,8 @@
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-sass": "^7.1.7",
-    "ember-font-awesome": "^4.0.0-rc.4"
+    "ember-font-awesome": "^4.0.0-rc.4",
+		"liquid-fire": "^0.29.3"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",

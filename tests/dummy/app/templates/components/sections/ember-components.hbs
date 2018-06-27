@@ -34,39 +34,81 @@
 
   {{#section.subsection name='Columns'}}
     {{#freestyle-usage 'basic-column' title='Basic Column'}}
-        <div class='layout-wrapper'>
-          {{#column-wrapper}}
-            {{#column-header}}
-              Items
-            {{/column-header}}
-            {{#column-main}}
-              {{#each (range 1 10) as |i|}}
-                {{#list-item leftIcon='reorder'}}Item {{i}}{{/list-item}}
-              {{/each}}
-            {{/column-main}}
-            {{#column-footer}}
-              Additional Information
-            {{/column-footer}}
-          {{/column-wrapper}}
-        </div>
+      <div class='layout-wrapper'>
+        {{#column-wrapper}}
+          {{#column-header}}
+            Items
+          {{/column-header}}
+          {{#column-main}}
+            {{#each (range 1 10) as |i|}}
+              {{#list-item leftIcon='reorder'}}Item
+                {{i}}
+              {{/list-item}}
+            {{/each}}
+          {{/column-main}}
+          {{#column-footer}}
+            Additional Information
+          {{/column-footer}}
+        {{/column-wrapper}}
+      </div>
     {{/freestyle-usage}}
 
     {{#freestyle-usage 'inverted-column' title='Inverted Column'}}
-        <div class='layout-wrapper'>
-          {{#column-wrapper classNames='inverted'}}
-            {{#column-header}}
-              Items
-            {{/column-header}}
-            {{#column-main}}
-              {{#each (range 1 10) as |i|}}
-                {{#list-item leftIcon='reorder'}}Item {{i}}{{/list-item}}
-              {{/each}}
-            {{/column-main}}
-            {{#column-footer}}
-              Additional Information
-            {{/column-footer}}
-          {{/column-wrapper}}
-        </div>
+      <div class='layout-wrapper'>
+        {{#column-wrapper classNames='inverted'}}
+          {{#column-header}}
+            Items
+          {{/column-header}}
+          {{#column-main}}
+            {{#each (range 1 10) as |i|}}
+              {{#list-item leftIcon='reorder'}}Item
+                {{i}}
+              {{/list-item}}
+            {{/each}}
+          {{/column-main}}
+          {{#column-footer}}
+            Additional Information
+          {{/column-footer}}
+        {{/column-wrapper}}
+      </div>
+    {{/freestyle-usage}}
+
+    {{#freestyle-usage 'column-navigation' title='Column Navigation'}}
+      <div class='layout-wrapper column'>
+        {{#column-nav currentPage='home' as |nav|}}
+          {{#column-nav-page nav=nav page='home'}}
+            {{#column-wrapper}}
+              {{#column-header}}
+                Users
+              {{/column-header}}
+              {{#column-main}}
+                {{#each (array 'Joe' 'Smith' 'Mary' 'Jane' 'Simon' 'Andrew') as |user|}}
+                  {{#list-item
+                    leftIcon='user'
+                    onClick=(action nav.navigateToPage 'user' user)}}
+                      {{user}}
+                  {{/list-item}}
+                {{/each}}
+              {{/column-main}}
+            {{/column-wrapper}}
+          {{/column-nav-page}}
+
+          {{#column-nav-page nav=nav page='user'}}
+            {{#column-wrapper}}
+              {{#column-header
+                leftIcon='chevron-left'
+                leftText='Users'
+                onLeftIconClick=(action nav.navigateBack)}}
+                  {{nav.context}}
+              {{/column-header}}
+              {{#column-main}}
+                {{#list-item leftIcon='inbox'}}Inbox{{/list-item}}
+                {{#list-item leftIcon='envelope'}}Sent{{/list-item}}
+              {{/column-main}}
+            {{/column-wrapper}}
+          {{/column-nav-page}}
+        {{/column-nav}}
+      </div>
     {{/freestyle-usage}}
   {{/section.subsection}}
 {{/freestyle-section}}

@@ -4,7 +4,9 @@
 .list-item {
 	padding: 0.5rem 1rem;
 
-	cursor: pointer;
+	&:not(.no-hover) {
+		cursor: pointer;
+	}
 	transition: 0.2s;
 
 	i {
@@ -13,9 +15,10 @@
 		margin-top: -0.1rem;
 		vertical-align: middle;
 		color: $faded-color;
+		cursor: pointer;
 	}
 
-	&:hover {
+	&:not(.no-hover):hover {
 		.item-main {
 			.item-right i {
 				opacity: 1;
@@ -27,7 +30,7 @@
 	&.faded {
 		opacity: 0.6;
 
-		&:hover {
+		&:not(.no-hover):hover {
 			opacity: 1;
 		}
 	}
@@ -38,7 +41,7 @@
 
 	@at-root {
 		.inverted .list-item {
-			&:hover {
+			&:not(.no-hover):hover {
 				background-color: transparentize($selected, 0.7);
 			}
 			&.selected {

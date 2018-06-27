@@ -3,5 +3,7 @@ import layout from '../templates/components/column-header';
 
 export default Component.extend({
   layout,
-  classNames: ['firm', 'header']
+  classNames: ['column-header', 'firm', 'header'],
+	onLeftIconClick: () => {},
+  onRightIconClick: () => {}
 });

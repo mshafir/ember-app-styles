@@ -1,1 +1,18 @@
-{{yield}}
+<div class="item-main">
+    <div class='item-left'>
+			<a {{action onLeftIconClick bubbles=false}}>
+        {{#if leftIcon}}
+            {{fa-icon icon=leftIcon}}
+        {{/if}}
+				{{#if leftText}}{{leftText}}{{/if}}
+			</a>
+    </div>
+    <div class="{{if (or leftIcon leftText) 'item-center text-center' 'item-center'}}">
+        {{yield}}
+    </div>
+    {{#if rightIcon}}
+        <div class='item-right' {{action onRightIconClick bubbles=false}}>
+            <a>{{fa-icon icon=rightIcon}}</a>
+        </div>
+    {{/if}}
+</div>

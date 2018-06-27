@@ -33,15 +33,15 @@
 	border: 1px solid $border-color;
 }
 
-.border-none  {
-	border: none;
+.border-none,.no-border {
+	border: none !important;
 }
 
 @each $side in top,left,bottom,right {
 	.border-#{$side}-color {
 		border-#{$side}: 1px solid $border-color;
 	}
-	
+
 	.border-#{$side}-none {
 		border-#{$side}: none;
 	}
